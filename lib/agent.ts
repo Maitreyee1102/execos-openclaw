@@ -15,7 +15,7 @@ export async function runAgent(userId: string) {
 
   try {
     //1. create agent run by user id
-
+    const agentRun = await createAgentRun(userId);
     //2. get gmail client
     const gmailClient = await getGmailClient(userId);
     if (!gmailClient) {
